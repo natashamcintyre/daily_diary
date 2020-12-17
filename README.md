@@ -7,6 +7,11 @@
 ## Build status
 - Just Started
 
+## Database Setup
+Connect to psql
+CREATE DATABASE "daily_diary"
+Connect to database
+
 ## Tables
 |entry|||
 |-------|------|-------|
@@ -14,12 +19,6 @@
 |1|day1|today I...|
 |2|day2|today I...|
 |3|day3|today I...|
-
-## Tech/framework used
-Built with Atom
-Written in Ruby, HTML, CSS
-Sinatra framework
-Capybara and Rspec for testing
 
 ## User stories
 As a user
@@ -37,6 +36,12 @@ I want to see a list of Diary Entry Titles
 As a user
 So that I can read my previous entries
 I want to click on a title to see the full Diary Entry
+
+## Tech/framework used
+Built with Atom
+Written in Ruby, HTML, CSS
+Sinatra framework
+Capybara and Rspec for testing
 
 ## Features
 tbc

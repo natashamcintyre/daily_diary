@@ -1,0 +1,1 @@
+CREATE TABLE entries(id SERIAL PRIMARY KEY, title VARCHAR(60), content VARCHAR(300));

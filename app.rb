@@ -7,7 +7,14 @@ class Diary < Sinatra::Base
   end
 
   get '/add_entry' do
-    erb: add_entry.erb
+    erb :add_entry
+  end
+
+  get '/new_entry' do
+    title = params[:title]
+    content = params[:content]
+    "#{title}: #{content}"
+    # Create Entry - Entry.create
   end
 
 end

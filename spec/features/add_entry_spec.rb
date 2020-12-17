@@ -4,6 +4,6 @@ feature 'adding an entry' do
     fill_in 'title', with: 'fake title'
     fill_in 'content', with: 'fake content'
     click_button 'Add entry'
-    expect(page). to have_text 'fake title'
+    expect(page).to have_text 'fake title'
   end
 end
