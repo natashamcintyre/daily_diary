@@ -9,6 +9,7 @@
 
 ## Tables
 |entry|------|-------|
+|-------|------|-------|
 |id----|title|content|
 |1-----|day1-|today I...|
 |2-----|day2-|today I...|
