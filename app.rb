@@ -1,4 +1,6 @@
 require 'sinatra/base'
+require 'databaseconnection'
+require_relative './setup_database.rb'
 
 class Diary < Sinatra::Base
 
