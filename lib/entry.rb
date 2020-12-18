@@ -12,4 +12,10 @@ class Entry
     Entry.new(result[0]['title'], result[0]['content'])
   end
 
+  def self.all
+    result = DatabaseConnection.query("SELECT * FROM entries")
+    result.map { |entry|
+      Entry.new(entry['title'], entry['content'])
+    }
+  end
 end

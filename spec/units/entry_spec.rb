@@ -23,4 +23,17 @@ describe Entry do
     end
   end
 
+  describe '#all' do
+    it "returns a list of all entry titles" do
+      Entry.create('title1', 'content1')
+      Entry.create('title2', 'content2')
+
+      list = Entry.all
+
+      expect(list.first).to be_a Entry
+      expect(list.first.title).to eq 'title1'
+      expect(list.last.title).to include 'title2'
+    end
+  end
+
 end

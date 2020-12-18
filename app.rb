@@ -1,5 +1,6 @@
 require 'sinatra/base'
-require 'databaseconnection'
+require File.dirname(__FILE__) + '/lib/databaseconnection.rb'
+require File.dirname(__FILE__) + '/lib/entry.rb'
 require_relative './setup_database.rb'
 
 class Diary < Sinatra::Base
@@ -14,7 +15,11 @@ class Diary < Sinatra::Base
 
   post '/add_entry' do
     Entry.create(params[:title], params[:content])
-    redirect '/'
+    redirect '/browse'
   end
 
+  get '/browse' do
+    @entries = Entry.all
+    erb :entry_list
+  end
 end
