@@ -8,15 +8,13 @@ class Diary < Sinatra::Base
     "Welcome to my diary"
   end
 
-  get '/add_entry' do
+  get '/new_entry' do
     erb :add_entry
   end
 
-  get '/new_entry' do
-    title = params[:title]
-    content = params[:content]
-    "#{title}: #{content}"
-    # Create Entry - Entry.create
+  post '/add_entry' do
+    Entry.create(params[:title], params[:content])
+    redirect '/'
   end
 
 end

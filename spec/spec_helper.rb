@@ -12,11 +12,14 @@
 # the additional setup, and require it from the spec files that actually need
 # it.
 #
+
+ENV['RACK_ENV'] = 'test'
+
 require 'capybara/rspec'
 require 'rspec'
 require 'capybara'
 require File.dirname(__FILE__) + '/../app.rb'
-ENV['RACKENV'] = 'test'
+
 Capybara.app = Diary
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|

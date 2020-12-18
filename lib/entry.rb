@@ -8,7 +8,8 @@ class Entry
   end
 
   def self.create(title, content)
-    @entry = Entry.new(title, content)
+    result = DatabaseConnection.query("INSERT INTO entries (title, content) VALUES ('#{title}', '#{content}') RETURNING title, content")
+    Entry.new(result[0]['title'], result[0]['content'])
   end
 
 end

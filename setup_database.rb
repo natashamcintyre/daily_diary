@@ -2,7 +2,7 @@
 require 'databaseconnection'
 
 if ENV['RACK_ENV'] == 'test'
-  DatabaseConnection.setup(dbname: daily_diary_test)
+  DatabaseConnection.setup('daily_diary_test')
 else
-  DatabaseConnection.setup(dbname: daily_diary)
+  DatabaseConnection.setup('daily_diary')
 end
