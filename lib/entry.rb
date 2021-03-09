@@ -18,4 +18,10 @@ class Entry
       Entry.new(entry['title'], entry['content'])
     }
   end
+
+  def self.get(title)
+    result = DatabaseConnection.query("SELECT title, content FROM entries WHERE title='#{title}'")
+    @selected_entry = Entry.new(result[0]['title'], result[0]['content'])
+  end
+
 end

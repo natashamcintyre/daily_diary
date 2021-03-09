@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1><%= @entry.title %></h1>
+    <p> <%= @entry.content %> </p>
+    <form action="/browse" method="get">
+      <input value="Back to browse entries" type="submit">
+    </form>
+  </body>
+</html>

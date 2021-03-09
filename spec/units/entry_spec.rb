@@ -36,4 +36,13 @@ describe Entry do
     end
   end
 
+  describe '#get' do
+    it 'retrieves the entry content' do
+      Entry.create('title1', 'content1')
+      my_entry = Entry.get('title1')
+
+      expect(my_entry.title).to eq 'title1'
+      expect(my_entry.content).to eq 'content1'
+    end
+  end
 end

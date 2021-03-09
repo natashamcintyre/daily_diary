@@ -6,7 +6,7 @@ require_relative './setup_database.rb'
 class Diary < Sinatra::Base
 
   get '/' do
-    "Welcome to my diary"
+    erb :index
   end
 
   get '/new_entry' do
@@ -21,5 +21,14 @@ class Diary < Sinatra::Base
   get '/browse' do
     @entries = Entry.all
     erb :entry_list
+  end
+
+  get '/read_entry' do
+    @entry = Entry.new(params[:title], params[:content])
+    erb :read_entry
+  end
+
+  delete '/delete' do
+    
   end
 end

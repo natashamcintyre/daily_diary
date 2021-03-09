@@ -11,6 +11,7 @@
 Connect to psql
 CREATE DATABASE "daily_diary"
 Connect to database
+Follow instructions in db/migrations
 
 ## Tables
 |entry|||

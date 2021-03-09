@@ -8,7 +8,7 @@
     <ul>
       <% @entries.each do |entry| %>
       <li>
-        <a> href="<%= entry.content %>"
+        <a href="/read_entry?title=<%=entry.title%>&content=<%=entry.content%>">
           <%= entry.title %>
         </a>
       </li>
